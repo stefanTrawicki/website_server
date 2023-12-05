@@ -1,0 +1,9 @@
+{% include "base.html" %}
+
+{% with front_page = front_page.attributes %}
+
+<h1 class="text-blue-400">Welcome to {{ front_page.Header }}</h1>
+
+<img src="{{ url_for('static', path=front_page.Logo) }}" alt="">
+
+{% endwith %}

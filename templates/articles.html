@@ -1,0 +1,9 @@
+{% include 'base.html' %}
+
+<ul>
+    {% for article in articles %}
+    <li>
+        {% with article=article %} {% include 'article.html' %} {% endwith %}
+    </li>
+    {% endfor %}
+</ul>
