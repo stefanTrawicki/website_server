@@ -9,5 +9,5 @@ templates = Jinja2Templates(directory="templates")
 
 @app.get("/")
 async def home(request: Request):
-    context = {"request": request}
+    context = {"request": request, "page": "home"}
     return templates.TemplateResponse("base.html", context)
